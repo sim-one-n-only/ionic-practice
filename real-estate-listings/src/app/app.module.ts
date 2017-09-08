@@ -6,7 +6,8 @@ import { StatusBar } from '@ionic-native/status-bar';
 
 import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
-import {AddListing} from "../pages/add-listing/add-listing";
+import { AddListing} from "../pages/add-listing/add-listing";
+import { ListingsService } from '../services/listings.service';
 
 
 @NgModule({
@@ -28,7 +29,8 @@ import {AddListing} from "../pages/add-listing/add-listing";
   providers: [
     StatusBar,
     SplashScreen,
-    {provide: ErrorHandler, useClass: IonicErrorHandler}
+    {provide: ErrorHandler, useClass: IonicErrorHandler},
+    ListingsService
   ]
 })
 export class AppModule {}
